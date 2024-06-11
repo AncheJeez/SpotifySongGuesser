@@ -1,6 +1,6 @@
 from dotenv import load_dotenv
 from PySide6.QtWidgets import QApplication
-from Vista.views import LogInWindow
+from Vista.views import StartWindow
 import os
 import sys
 
@@ -11,6 +11,6 @@ client_secret = os.getenv("CLIENT_SECRET")
 
 if __name__ == "__main__":
     app = QApplication(sys.argv)
-    window = LogInWindow()
+    window = StartWindow()
     window.show()
     sys.exit(app.exec())
