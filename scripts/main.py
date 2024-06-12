@@ -1,6 +1,6 @@
 from dotenv import load_dotenv
 from PySide6.QtWidgets import QApplication
-from Vista.views import StartWindow
+from Vista.start_window import StartWindow
 import os
 import sys
 

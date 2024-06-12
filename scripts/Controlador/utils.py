@@ -11,7 +11,13 @@ list_of_defaults = {
     "rock_classic": "37i9dQZF1DWXRqgorJj26U",
     "viva_latino": "37i9dQZF1DX10zKzsJ2jva",
     "all_out_2000": "37i9dQZF1DX4o1oenSJRJd",
-    "all_out_80s": "37i9dQZF1DX4UtSsGT1Sbe"
+    "all_out_80s": "37i9dQZF1DX4UtSsGT1Sbe",
+    "under_ground_dance_&_electronica": "3gW3MRRNkjlnbrwC8LVE9H",
+    "2024_classroom_songs": "31ymdYCITDnZRtkKzP3Itp",
+    "kitsune_musique_essential": "0cc8YMQWsSzODyTpdVB6mI",
+    "warehouse_party":"37i9dQZF1DX5hHfOi73rY3",
+    "altar":"37i9dQZF1DXa71eg5j9dKZ",
+    "new_music_weekly_monstercar":"4kw9kdjzx1UmyWvpysl0y2"
 }
 
 def open_window(current_window, window_class, *args):
