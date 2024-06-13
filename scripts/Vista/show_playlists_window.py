@@ -2,8 +2,7 @@ from PySide6.QtWidgets import QMainWindow, QLabel, QVBoxLayout, QWidget, QPushBu
 from PySide6.QtGui import QPixmap, QIcon
 from PySide6.QtCore import Qt, QUrl
 from PySide6.QtMultimedia import QMediaPlayer, QAudioOutput
-from Controlador.utils import open_window, list_of_defaults
-#from .start_window import StartWindow
+from Controlador.utils import open_window, list_of_defaults, load_settings, load_translations
 from .game_window import GameWindow
 from Controlador.spotify_client import sp
 import random
@@ -18,6 +17,9 @@ class ShowPlayListsWindow(QMainWindow):
         self.playing = False
         self.back_view_class = back_view_class
         self.user_or_defaults = user_or_defaults
+
+        settings = load_settings()
+        lenguage = settings.get('lenguage', 'en')
         
         self.central_widget = QWidget()
         self.setCentralWidget(self.central_widget)
@@ -25,7 +27,7 @@ class ShowPlayListsWindow(QMainWindow):
         
         layout = QVBoxLayout(self.central_widget)
 
-        texto = "Playlists from logged user" if user_or_defaults else "Playlists from Top Spotify"
+        texto = f"{load_translations(lenguage,'user_playlists')}" if user_or_defaults else f"{load_translations(lenguage,'spotify_playlists')}"
         label = QLabel(texto)
         label.setStyleSheet("color: #FFFFFF")
         layout.addWidget(label)
@@ -34,7 +36,7 @@ class ShowPlayListsWindow(QMainWindow):
         self.list_widget.setStyleSheet("color: #FFFFFF")
         layout.addWidget(self.list_widget)
 
-        self.play_button = QPushButton("Play with this PlayList")
+        self.play_button = QPushButton(f"{load_translations(lenguage,'play_with_selected')}")
         self.play_button.setStyleSheet("""QPushButton {
                                             background-color: #1DB954;
                                             color: #191414;

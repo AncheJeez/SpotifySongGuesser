@@ -1,8 +1,7 @@
-from PySide6.QtWidgets import QMainWindow, QVBoxLayout, QWidget, QLabel, QPushButton, QHBoxLayout, QSlider, QCheckBox
+from PySide6.QtWidgets import QMainWindow, QVBoxLayout, QWidget, QLabel, QPushButton, QHBoxLayout, QSlider, QCheckBox, QComboBox
 from PySide6.QtCore import Qt
 from PySide6.QtGui import QIcon
-from Controlador.utils import open_window, load_settings, save_settings
-
+from Controlador.utils import open_window, load_settings, save_settings, load_translations
 
 
 class OptionsWindow(QMainWindow):
@@ -20,12 +19,13 @@ class OptionsWindow(QMainWindow):
         settings = load_settings()
         initial_volume = settings.get('volume', 50)
         cheats_enabled = settings.get('cheats_enabled', 0)
+        self.lenguage = settings.get('lenguage', 'en')
 
         slider_layout = QHBoxLayout()
 
-        volume_label = QLabel("Volume")
-        volume_label.setStyleSheet("color: #FFFFFF")
-        slider_layout.addWidget(volume_label)
+        self.volume_label = QLabel(f"{load_translations(self.lenguage,'volume')}: {initial_volume}")
+        self.volume_label.setStyleSheet("color: #FFFFFF")
+        slider_layout.addWidget(self.volume_label)
 
         # Volume Slider
         self.volume_slider = QSlider(Qt.Horizontal)
@@ -57,18 +57,35 @@ class OptionsWindow(QMainWindow):
         self.volume_slider.valueChanged.connect(self.change_volume)
         slider_layout.addWidget(self.volume_slider)
 
-        self.value_label = QLabel(str(initial_volume))
-        self.value_label.setStyleSheet("color: #FFFFFF")
-        slider_layout.addWidget(self.value_label)
-
         main_layout.addLayout(slider_layout)
 
-        self.cheats_checkbox = QCheckBox("Enable Cheats")
+        # chetos
+        self.cheats_checkbox = QCheckBox(load_translations(self.lenguage,"enable_cheats"))
         self.cheats_checkbox.setChecked(cheats_enabled)
         self.cheats_checkbox.setStyleSheet("color: #FFFFFF")
         self.cheats_checkbox.stateChanged.connect(self.change_cheats)
         main_layout.addWidget(self.cheats_checkbox)
 
+
+        self.lenguage_layout = QHBoxLayout()
+
+        # Lenguaje combo
+        self.lenguage_label = QLabel(load_translations(self.lenguage,"lenguage"))
+        self.lenguage_label.setStyleSheet("color: #FFFFFF")
+        self.lenguage_layout.addWidget(self.lenguage_label)
+
+        self.lenguage_combo = QComboBox()
+        self.lenguage_combo.setStyleSheet("background-color: #1DB954; color: #191414;")
+        self.lenguage_combo.addItem(load_translations(self.lenguage,"english"), "en")
+        self.lenguage_combo.addItem(load_translations(self.lenguage,"spanish"), "es")
+        index_language = 1 if self.lenguage == 'es' else 0
+        self.lenguage_combo.setCurrentIndex(index_language)
+        self.lenguage_combo.currentIndexChanged.connect(self.change_lenguage)
+        self.lenguage_layout.addWidget(self.lenguage_combo)
+
+        main_layout.addLayout(self.lenguage_layout)
+
+        # volver atras
         button = QPushButton()
         button.setStyleSheet("background-color: #1DB954; color: #191414;")
         icon = QIcon("assets/undo.png")
@@ -78,7 +95,7 @@ class OptionsWindow(QMainWindow):
         
     def change_volume(self, value):
         settings = load_settings()
-        self.value_label.setText(str(value))
+        self.volume_label.setText(f"{load_translations(self.lenguage,'volume')}: {value}")
         settings['volume'] = value
         save_settings(settings)
 
@@ -87,3 +104,14 @@ class OptionsWindow(QMainWindow):
         settings = load_settings()
         settings['cheats_enabled'] = state
         save_settings(settings)
+
+    def change_lenguage(self, index):
+        new_lenguage_code = self.lenguage_combo.itemData(index)
+        settings = load_settings()
+        settings['lenguage'] = new_lenguage_code
+        save_settings(settings)
+
+        self.volume_label.setText(f"{load_translations(new_lenguage_code,'volume')}: {settings['volume']}")
+        self.cheats_checkbox.setText(load_translations(new_lenguage_code,"enable_cheats"))
+        self.lenguage_label.setText(load_translations(new_lenguage_code,"lenguage"))
+        

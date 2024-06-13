@@ -1,0 +1,26 @@
+{
+    "en": {
+        "welcome": "Welcome",
+        "choose_way": "Choose a way of playing",
+        "spotify_playlists": "Spotify playlists",
+        "user_playlists": "User's playlists",
+        "play_with_selected": "Play with this PlayList",
+        "enable_cheats": "Enable Cheats",
+        "volume": "Volume",
+        "lenguage": "Language",
+        "english": "English",
+        "spanish": "Spanish"
+    },
+    "es": {
+        "welcome": "Bienvenido",
+        "choose_way": "Elige una forma de jugar",
+        "spotify_playlists": "Listas de reproduccion de Spotify",
+        "user_playlists": "Listas de reproduccion del usuario",
+        "play_with_selected": "Jugar con la lista seleccionada",
+        "enable_cheats": "Activar trampas",
+        "volume": "Volumen",
+        "lenguage": "Idioma",
+        "english": "Ingles",
+        "spanish": "Espanol"
+    }
+}

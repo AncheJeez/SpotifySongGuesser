@@ -31,10 +31,20 @@ def close_window(window):
 
 def load_settings(filename='settings.json'):
     if not os.path.exists(filename):
-        return {"volume": 50}
-
+        return {"volume": 50, "cheats_enabled": 0, 'language': 'en'}
     with open(filename, 'r') as file:
         return json.load(file)
+
+def load_translations(language, sentece_to_get,filename='translations.json'):
+    if not os.path.exists(filename):
+        print("The translation file was not found, please reinstall.")
+    with open(filename, 'r') as file:
+        translations = json.load(file)
+    if language in translations and sentece_to_get in translations[language]:
+        return translations[language][sentece_to_get]
+    else:
+        print(f"Translation not found for '{sentece_to_get}' in language '{language}'")
+        return None
 
 def save_settings(settings, filename='settings.json'):
     with open(filename, 'w') as file:
