@@ -60,7 +60,7 @@ Aceptar el uso              |  Account -> Manage apps
 
 >[!Note]
 > Se utiliza [pillow](https://python-pillow.org) y [numpy](https://numpy.org) para el propio juego.
-> Cuando se adivinan las canciones, la propia imagen del album al que pertenece se muestra en parte censurada.
+> Cuando se adivinan las canciones, la propia imagen del álbum al que pertenece se muestra en parte censurada.
 > Utilizamos pillow para poder manipular las imagenes, dibujando los rectángulos encima dependiendo de la situación en el juego.<br/>
 > Y utilizamos numpy para averiguar la "media" de color de la imagen, para que corresponda el color de la censura.<br/>
 > Aquí un ejemplo:
