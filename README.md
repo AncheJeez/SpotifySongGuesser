@@ -59,7 +59,6 @@ Fase 1                     |  Fase 2
 :-------------------------:|:-------------------------:
 ![](https://github.com/AncheJeez/SpotifySongGuesser/blob/main/assets/fase1.png)  |  ![](https://github.com/AncheJeez/SpotifySongGuesser/blob/main/assets/fase2.png)
 Fase 3                     |  Fase 4
-:-------------------------:|:-------------------------:
 ![](https://github.com/AncheJeez/SpotifySongGuesser/blob/main/assets/fase3.png)  |  ![](https://github.com/AncheJeez/SpotifySongGuesser/blob/main/assets/fase4.png)
 
 ## Instalación de las dependecias
