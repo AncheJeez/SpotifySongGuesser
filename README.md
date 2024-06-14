@@ -23,6 +23,9 @@
 >  <br/>
 >  <img height="150" src="https://github.com/AncheJeez/SpotifySongGuesser/blob/main/assets/manage_access.png">
 > </p>
+Solarized dark             |  Solarized Ocean
+:-------------------------:|:-------------------------:
+![](https://github.com/AncheJeez/SpotifySongGuesser/blob/main/assets/accept_spotify.png)  |  ![](https://github.com/AncheJeez/SpotifySongGuesser/blob/main/assets/manage_access.png)
 > Para usar esta API, el creador del programa tiene registrarse en developer.spotify.com y crear un programa en el dashboard.
 > <p align="center">
 >  <img height="150" src="https://github.com/AncheJeez/SpotifySongGuesser/blob/main/assets/dash_board_start.png">
