@@ -43,10 +43,10 @@
 
 ## Instalación de las dependecias
 > [!Tip]
-> <b>Spotipy</b>: pip install spotipy --upgrade
-> <b>PySide6</b>: pip install pyside6 | python -m pip install --upgrade pyside6
-> <b>Pillow</b>: pip install pillow
-> <b>Numpy</b>: pip install numpy
+> <b>Spotipy</b>: pip install spotipy --upgrade <br/>
+> <b>PySide6</b>: pip install pyside6 | python -m pip install --upgrade pyside6 <br/>
+> <b>Pillow</b>: pip install pillow <br/>
+> <b>Numpy</b>: pip install numpy <br/>
 
 
 https://forum.qt.io/topic/147961/how-to-play-sounds-using-qmediaplayer/16
