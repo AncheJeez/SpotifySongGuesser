@@ -1,5 +1,5 @@
 <p align="center">
-  <img height="200" src="">
+  <img height="200" src="https://github.com/AncheJeez/SpotifySongGuesser/blob/main/assets/SpotifyGuesser_logo_transp.png">
   <br/>
 </p>
 <br/>
