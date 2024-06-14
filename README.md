@@ -9,11 +9,11 @@
 
 ## Español
 > [!Warning]
-> Este programa está en <b>beta</b> según la API de spotify. Solo aquellos añadidos al dashboard del usuario creador del 
+> Este programa está en <b>desarrollo</b> según la API de spotify. Solo aquellos añadidos al dashboard del usuario creador del 
 > programa pueden acceder a ella. Se tiene que añadir el correo a este dashboard.
 > Además, se tienen que instalar ciertas dependecias, como <b>pyside6</b>, <b>pillow</b> y <b>numpy</b>.
 
-## Información de las tecnologías
+## Información sobre las tecnologías
 > [!Note]
 > [Spotify API](https://developer.spotify.com/documentation/web-api)<br/>
 > Para usar esta API hay que primero registrarse en developer.spotify.com y crear un programa en el dashboard.
@@ -23,7 +23,12 @@
 > </p>
 > Donde podremos acceder a ciertas estadisticas en la propia pagina sobre nuestro programa.
 > <p align="center">
->  <img height="200" src="https://github.com/AncheJeez/SpotifySongGuesser/blob/main/assets/dash_board_stats.png">
+>  <img height="250" src="https://github.com/AncheJeez/SpotifySongGuesser/blob/main/assets/dash_board_stats.png">
+>  <br/>
+> </p>
+> Pero mas importante, podremos acceder al Client ID y Client Secret, que son necesarios para poder usar la API de Spotify
+> <p align="center">
+>  <img height="250" src="https://github.com/AncheJeez/SpotifySongGuesser/blob/main/assets/dashboard_basic_info.png">
 >  <br/>
 > </p>
 > <br/>
