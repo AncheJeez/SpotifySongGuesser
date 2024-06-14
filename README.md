@@ -55,13 +55,11 @@ Aceptar el uso              |  Account -> Manage apps
 > Y utilizamos numpy para averiguar la "media" de color de la imagen, para que corresponda el color de la censura.<br/>
 > Aquí un ejemplo:
 >
-<p  align="center">
 Fase 1                     |  Fase 2
 :-------------------------:|:-------------------------:
 ![](https://github.com/AncheJeez/SpotifySongGuesser/blob/main/assets/fase1.png)  |  ![](https://github.com/AncheJeez/SpotifySongGuesser/blob/main/assets/fase2.png)
 Fase 3                     |  Fase 4
 ![](https://github.com/AncheJeez/SpotifySongGuesser/blob/main/assets/fase3.png)  |  ![](https://github.com/AncheJeez/SpotifySongGuesser/blob/main/assets/fase4.png)
-</p>
 
 ## Instalación de las dependecias
 > [!Tip]
