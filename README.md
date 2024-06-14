@@ -18,11 +18,6 @@
 > [Spotify API](https://developer.spotify.com/documentation/web-api)<br/><br/>
 > El usuario unicamente tiene que tener su cuenta registrada en spotify y ejecutar el programa, se abrirá una pestaña en el navegador
 > donde tendrá que aceptar el uso de sus datos para el programa.
-> <p align="center">
->  <img height="150" src="https://github.com/AncheJeez/SpotifySongGuesser/blob/main/assets/accept_spotify.png">
->  <br/>
->  <img height="150" src="https://github.com/AncheJeez/SpotifySongGuesser/blob/main/assets/manage_access.png">
-> </p>
 Aceptar el uso              |  Account -> Manage apps
 :-------------------------:|:-------------------------:
 ![](https://github.com/AncheJeez/SpotifySongGuesser/blob/main/assets/accept_spotify.png)  |  ![](https://github.com/AncheJeez/SpotifySongGuesser/blob/main/assets/manage_access.png)
