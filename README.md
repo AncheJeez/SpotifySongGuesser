@@ -37,6 +37,7 @@ Aceptar el uso              |  Account -> Manage apps
 > <p align="center">
 >  <img height="250" src="https://github.com/AncheJeez/SpotifySongGuesser/blob/main/assets/dashboard_basic_info.png">
 >  <br/>
+>  <img height="250" src="https://github.com/AncheJeez/SpotifySongGuesser/blob/main/assets/auth-client-credentials.png">
 > </p>
 > <br/>
 
