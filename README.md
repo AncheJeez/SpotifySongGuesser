@@ -42,13 +42,16 @@ Aceptar el uso              |  Account -> Manage apps
 > <p align="center">
 >  <img height="250" src="https://github.com/AncheJeez/SpotifySongGuesser/blob/main/assets/dashboard_basic_info.png">
 >  <br/>
->  <img height="450" src="https://github.com/AncheJeez/SpotifySongGuesser/blob/main/assets/auth-client-credentials.png">
 > </p>
 > <br/>
 
 >[!Note]
 > Este proyecto utiliza [Spotipy](https://spotipy.readthedocs.io/en/2.24.0/) el cuál nos permite una mayor facilidad para acceder 
 > a todos los end points y facilita la autoriación con el usuario.
+> <p align="center">
+>  <img height="450" src="https://github.com/AncheJeez/SpotifySongGuesser/blob/main/assets/auth-client-credentials.png">
+>  <br/>
+> </p>
 
 > [!Note]
 > [PySide6](https://doc.qt.io/qtforpython-6/PySide6/QtWidgets/index.html)<br/>
