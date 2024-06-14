@@ -14,9 +14,10 @@
 > Además, se tienen que instalar ciertas dependecias, como <b>pyside6</b>, <b>pillow</b> y <b>numpy</b>.
 
 ## Información de las tecnologías
-> [Spotify API](https://developer.spotify.com/documentation/web-api)
+> [!Note]
+> [Spotify API](https://developer.spotify.com/documentation/web-api)<br/>
 > <br/>
-> [PySide6](https://doc.qt.io/qtforpython-6/PySide6/QtWidgets/index.html)
+> [PySide6](https://doc.qt.io/qtforpython-6/PySide6/QtWidgets/index.html)<br/>
 > [Pagina](https://doc.qt.io/qtforpython-6.6/examples/index.html) de ejemplos de PySide6 que ayudaron mucho con el proceso de interfaz
 
 ## English
