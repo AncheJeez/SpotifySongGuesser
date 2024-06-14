@@ -5,14 +5,14 @@
 <br/>
 
 ## Spotify Guesser
-### Simple juego de musica donde puedes usar tus playlists de Spotify
+### Simple juego de música en el que puedes usar tus playlists de Spotify
 
 ## Tabla de contenidos
 - [Advertencias](#adevertencias)
 - [Información](#información-sobre-las-tecnologías)
 - [Dependecias](#instalación-de-las-dependecias)
 
-## Adevertencias
+## Advertencias
 > [!Warning]
 > Este programa está en <b>desarrollo</b> según la API de spotify. Solo aquellos añadidos al dashboard del usuario creador del 
 > programa pueden acceder a ella. Se tiene que añadir el correo a este dashboard.
@@ -21,7 +21,7 @@
 ## Información sobre las tecnologías
 > [!Note]
 > [Spotify API](https://developer.spotify.com/documentation/web-api)<br/><br/>
-> El usuario unicamente tiene que tener su cuenta registrada en spotify y ejecutar el programa, se abrirá una pestaña en el navegador
+> El usuario únicamente tiene que tener su cuenta registrada en Spotify y ejecutar el programa, se abrirá una pestaña en el navegador
 > donde tendrá que aceptar el uso de sus datos para el programa.
 >
 Aceptar el uso              |  Account -> Manage apps
@@ -33,12 +33,12 @@ Aceptar el uso              |  Account -> Manage apps
 >  <img height="150" src="https://github.com/AncheJeez/SpotifySongGuesser/blob/main/assets/dash_board_start.png">
 >  <br/>
 > </p>
-> Donde podremos acceder a ciertas estadisticas en la propia pagina sobre nuestro programa.
+> Donde podremos acceder a ciertas estadísticas en la propia página sobre nuestro programa.
 > <p align="center">
 >  <img height="250" src="https://github.com/AncheJeez/SpotifySongGuesser/blob/main/assets/dash_board_stats.png">
 >  <br/>
 > </p>
-> Pero mas importante, podremos acceder al Client ID y Client Secret, que son necesarios para poder usar la API de Spotify.
+> Pero más importante, podremos acceder al Client ID y Client Secret, que son necesarios para poder usar la API de Spotify.
 > <p align="center">
 >  <img height="250" src="https://github.com/AncheJeez/SpotifySongGuesser/blob/main/assets/dashboard_basic_info.png">
 >  <br/>
@@ -55,13 +55,13 @@ Aceptar el uso              |  Account -> Manage apps
 
 > [!Note]
 > [PySide6](https://doc.qt.io/qtforpython-6/PySide6/QtWidgets/index.html)<br/>
-> [Pagina](https://doc.qt.io/qtforpython-6.6/examples/index.html) de ejemplos de PySide6 que ayudaron mucho con el proceso de interfaz.<br/>
-> [Foro](https://forum.qt.io/topic/147961/how-to-play-sounds-using-qmediaplayer/16) que me ayudo mucho en el tema del audio y mediaplayer.
+> [Página](https://doc.qt.io/qtforpython-6.6/examples/index.html) de ejemplos de PySide6 que ayudaron mucho con el proceso de interfaz.<br/>
+> [Foro](https://forum.qt.io/topic/147961/how-to-play-sounds-using-qmediaplayer/16) que me ayudó mucho en el tema del audio y mediaplayer.
 
 >[!Note]
 > Se utiliza [pillow](https://python-pillow.org) y [numpy](https://numpy.org) para el propio juego.
 > Cuando se adivinan las canciones, la propia imagen del album al que pertenece se muestra en parte censurada.
-> Utilizamos pillow para poder manipular las imagenes, dibujando los rectangulos encima dependiendo de la situación en el juego.<br/>
+> Utilizamos pillow para poder manipular las imagenes, dibujando los rectángulos encima dependiendo de la situación en el juego.<br/>
 > Y utilizamos numpy para averiguar la "media" de color de la imagen, para que corresponda el color de la censura.<br/>
 > Aquí un ejemplo:
 >
