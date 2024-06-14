@@ -16,15 +16,15 @@
 ## Información de las tecnologías
 > [!Note]
 > [Spotify API](https://developer.spotify.com/documentation/web-api)<br/>
+> Para usar esta API hay que primero registrarse en developer.spotify.com y crear un programa en el dashboard.
+> <p align="center">
+>  <img height="100" src="https://github.com/AncheJeez/SpotifySongGuesser/blob/main/assets/dash_board_start.png">
+>  <br/>
+> </p>
 > <br/>
 > [PySide6](https://doc.qt.io/qtforpython-6/PySide6/QtWidgets/index.html)<br/>
 > [Pagina](https://doc.qt.io/qtforpython-6.6/examples/index.html) de ejemplos de PySide6 que ayudaron mucho con el proceso de interfaz
 
-## English
-> [!Warning]
-> This program is in <b>beta</b> according to the Spotify API. Only those added to the dashboard of the program creator can access it.
-> The email must be added to this dashboard.
-> Additionally, certain dependencies need to be installed, such as <b>pyside6</b>, <b>pillow</b>, and <b>numpy</b>.
 
 python -m pip install --upgrade pyside6
 
