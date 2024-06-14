@@ -22,7 +22,8 @@
 Aceptar el uso              |  Account -> Manage apps
 :-------------------------:|:-------------------------:
 ![](https://github.com/AncheJeez/SpotifySongGuesser/blob/main/assets/accept_spotify.png)  |  ![](https://github.com/AncheJeez/SpotifySongGuesser/blob/main/assets/manage_access.png)
-> Para usar esta API, el creador del programa tiene registrarse en developer.spotify.com y crear un programa en el dashboard.
+> [!Note]
+> El creador del programa para usar la API tiene registrarse en developer.spotify.com y crear un programa en el dashboard.
 > <p align="center">
 >  <img height="150" src="https://github.com/AncheJeez/SpotifySongGuesser/blob/main/assets/dash_board_start.png">
 >  <br/>
@@ -46,6 +47,19 @@ Aceptar el uso              |  Account -> Manage apps
 > [!Note]
 > [PySide6](https://doc.qt.io/qtforpython-6/PySide6/QtWidgets/index.html)<br/>
 > [Pagina](https://doc.qt.io/qtforpython-6.6/examples/index.html) de ejemplos de PySide6 que ayudaron mucho con el proceso de interfaz
+
+>[!Note]
+> Se utiliza [pillow](https://python-pillow.org) y [numpy](https://numpy.org) para el propio juego.
+> Cuando se adivinan las canciones, la propia imagen del album al que pertenece se muestra en parte censurada.
+> Utilizamos pillow para poder manipular las imagenes, dibujando los rectangulos encima dependiendo de la situación en el juego.
+> Y utilizamos numpy para averiguar la "media" de color de la imagen, para que corresponda el color de la censura.<br/>
+> Aquí un ejemplo:
+Fase 1            |  Fase 2
+:-------------------------:|:-------------------------:
+![](https://github.com/AncheJeez/SpotifySongGuesser/blob/main/assets/fase1.png)  |  ![](https://github.com/AncheJeez/SpotifySongGuesser/blob/main/assets/fase2.png)
+Fase 3          |  Fase 4
+:-------------------------:|:-------------------------:
+![](https://github.com/AncheJeez/SpotifySongGuesser/blob/main/assets/fase3.png)  |  ![](https://github.com/AncheJeez/SpotifySongGuesser/blob/main/assets/fase4.png)
 
 ## Instalación de las dependecias
 > [!Tip]
