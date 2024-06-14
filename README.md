@@ -3,8 +3,12 @@
   <br/>
 </p>
 <br/>
-# SpotifySongGuesser
-TFG DAM
+# Spotify Guesser
+### Simple music game where you guess your favorite songs!
+
+> [!Warning]
+> This aplication is on beta as Spotify standars, you need to be registered in the owner's dashboard in order to work.
+> Also, this program uses pyside6, pillow and numpy
 
 python -m pip install --upgrade pyside6
 
