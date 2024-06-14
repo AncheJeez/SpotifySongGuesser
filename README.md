@@ -5,18 +5,22 @@
 <br/>
 
 ## Spotify Guesser
-### Simple jugo de musica donde puedes usar tus playlists de Spotify
+### Simple juego de musica donde puedes usar tus playlists de Spotify
+
+## Español
 > [!Warning]
-> Español <br>
 > Este programa está en <b>beta</b> según la API de spotify. Solo aquellos añadidos al dashboard del usuario creador del 
 > programa pueden acceder a ella. Se tiene que añadir el correo a este dashboard.
 > Además, se tienen que instalar ciertas dependecias, como <b>pyside6</b>, <b>pillow</b> y <b>numpy</b>.
 
-## Información
+## Información de las tecnologías
 > [Spotify API](https://developer.spotify.com/documentation/web-api)
+> <br/>
+> [PySide6](https://doc.qt.io/qtforpython-6/PySide6/QtWidgets/index.html)
+> [Pagina](https://doc.qt.io/qtforpython-6.6/examples/index.html) de ejemplos de PySide6 que ayudaron mucho con el proceso de interfaz
 
+## English
 > [!Warning]
-> English <br>
 > This program is in <b>beta</b> according to the Spotify API. Only those added to the dashboard of the program creator can access it.
 > The email must be added to this dashboard.
 > Additionally, certain dependencies need to be installed, such as <b>pyside6</b>, <b>pillow</b>, and <b>numpy</b>.
