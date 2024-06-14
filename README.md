@@ -16,7 +16,14 @@
 ## Información sobre las tecnologías
 > [!Note]
 > [Spotify API](https://developer.spotify.com/documentation/web-api)<br/><br/>
-> Para usar esta API hay que primero registrarse en developer.spotify.com y crear un programa en el dashboard.
+> El usuario unicamente tiene que tener su cuenta registrada en spotify y ejecutar el programa, se abrirá una pestaña en el navegador
+> donde tendrá que aceptar el uso de sus datos para el programa.
+> <p align="center">
+>  <img height="150" src="https://github.com/AncheJeez/SpotifySongGuesser/blob/main/assets/accept_spotify.png">
+>  <br/>
+>  <img height="150" src="https://github.com/AncheJeez/SpotifySongGuesser/blob/main/assets/manage_access.png">
+> </p>
+> Para usar esta API, el creador del programa tiene registrarse en developer.spotify.com y crear un programa en el dashboard.
 > <p align="center">
 >  <img height="150" src="https://github.com/AncheJeez/SpotifySongGuesser/blob/main/assets/dash_board_start.png">
 >  <br/>
