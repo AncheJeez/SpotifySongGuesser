@@ -23,10 +23,12 @@
 > </p>
 > Donde podremos acceder a ciertas estadisticas en la propia pagina sobre nuestro programa.
 > <p align="center">
->  <img height="150" src="https://github.com/AncheJeez/SpotifySongGuesser/blob/main/assets/dash_board_stats.png">
+>  <img height="200" src="https://github.com/AncheJeez/SpotifySongGuesser/blob/main/assets/dash_board_stats.png">
 >  <br/>
 > </p>
 > <br/>
+
+> [!Note]
 > [PySide6](https://doc.qt.io/qtforpython-6/PySide6/QtWidgets/index.html)<br/>
 > [Pagina](https://doc.qt.io/qtforpython-6.6/examples/index.html) de ejemplos de PySide6 que ayudaron mucho con el proceso de interfaz
 
