@@ -51,15 +51,17 @@ Aceptar el uso              |  Account -> Manage apps
 >[!Note]
 > Se utiliza [pillow](https://python-pillow.org) y [numpy](https://numpy.org) para el propio juego.
 > Cuando se adivinan las canciones, la propia imagen del album al que pertenece se muestra en parte censurada.
-> Utilizamos pillow para poder manipular las imagenes, dibujando los rectangulos encima dependiendo de la situación en el juego.
+> Utilizamos pillow para poder manipular las imagenes, dibujando los rectangulos encima dependiendo de la situación en el juego.<br/>
 > Y utilizamos numpy para averiguar la "media" de color de la imagen, para que corresponda el color de la censura.<br/>
 > Aquí un ejemplo:
 >
+<p  align="center">
 Fase 1                     |  Fase 2
 :-------------------------:|:-------------------------:
 ![](https://github.com/AncheJeez/SpotifySongGuesser/blob/main/assets/fase1.png)  |  ![](https://github.com/AncheJeez/SpotifySongGuesser/blob/main/assets/fase2.png)
 Fase 3                     |  Fase 4
 ![](https://github.com/AncheJeez/SpotifySongGuesser/blob/main/assets/fase3.png)  |  ![](https://github.com/AncheJeez/SpotifySongGuesser/blob/main/assets/fase4.png)
+</p>
 
 ## Instalación de las dependecias
 > [!Tip]
