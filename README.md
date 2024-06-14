@@ -7,7 +7,12 @@
 ## Spotify Guesser
 ### Simple juego de musica donde puedes usar tus playlists de Spotify
 
-## Español
+## Tabla de contenidos
+-[Advertencias](#adevertencias)
+-[Información](#información-sobre-las-tecnologías)
+-[Dependecias](#instalación-de-las-dependecias)
+
+## Adevertencias
 > [!Warning]
 > Este programa está en <b>desarrollo</b> según la API de spotify. Solo aquellos añadidos al dashboard del usuario creador del 
 > programa pueden acceder a ella. Se tiene que añadir el correo a este dashboard.
