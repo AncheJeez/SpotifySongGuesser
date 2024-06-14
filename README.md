@@ -8,9 +8,9 @@
 ### Simple juego de musica donde puedes usar tus playlists de Spotify
 
 ## Tabla de contenidos
--[Advertencias](#adevertencias)
--[Información](#información-sobre-las-tecnologías)
--[Dependecias](#instalación-de-las-dependecias)
+- [Advertencias](#adevertencias)
+- [Información](#información-sobre-las-tecnologías)
+- [Dependecias](#instalación-de-las-dependecias)
 
 ## Adevertencias
 > [!Warning]
