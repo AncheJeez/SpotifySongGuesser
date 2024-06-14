@@ -55,7 +55,8 @@ Aceptar el uso              |  Account -> Manage apps
 
 > [!Note]
 > [PySide6](https://doc.qt.io/qtforpython-6/PySide6/QtWidgets/index.html)<br/>
-> [Pagina](https://doc.qt.io/qtforpython-6.6/examples/index.html) de ejemplos de PySide6 que ayudaron mucho con el proceso de interfaz
+> [Pagina](https://doc.qt.io/qtforpython-6.6/examples/index.html) de ejemplos de PySide6 que ayudaron mucho con el proceso de interfaz.
+> [Foro](https://forum.qt.io/topic/147961/how-to-play-sounds-using-qmediaplayer/16) que me ayudo mucho en el tema del audio y mediaplayer.
 
 >[!Note]
 > Se utiliza [pillow](https://python-pillow.org) y [numpy](https://numpy.org) para el propio juego.
@@ -77,5 +78,3 @@ Fase 3                     |  Fase 4
 > <b>Pillow</b>: pip install pillow <br/>
 > <b>Numpy</b>: pip install numpy <br/>
 
-
-https://forum.qt.io/topic/147961/how-to-play-sounds-using-qmediaplayer/16
