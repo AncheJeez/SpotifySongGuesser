@@ -18,7 +18,12 @@
 > [Spotify API](https://developer.spotify.com/documentation/web-api)<br/>
 > Para usar esta API hay que primero registrarse en developer.spotify.com y crear un programa en el dashboard.
 > <p align="center">
->  <img height="100" src="https://github.com/AncheJeez/SpotifySongGuesser/blob/main/assets/dash_board_start.png">
+>  <img height="150" src="https://github.com/AncheJeez/SpotifySongGuesser/blob/main/assets/dash_board_start.png">
+>  <br/>
+> </p>
+> Donde podremos acceder a ciertas estadisticas en la propia pagina sobre nuestro programa.
+> <p align="center">
+>  <img height="150" src="https://github.com/AncheJeez/SpotifySongGuesser/blob/main/assets/dash_board_stats.png">
 >  <br/>
 > </p>
 > <br/>
