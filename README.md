@@ -54,10 +54,11 @@ Aceptar el uso              |  Account -> Manage apps
 > Utilizamos pillow para poder manipular las imagenes, dibujando los rectangulos encima dependiendo de la situación en el juego.
 > Y utilizamos numpy para averiguar la "media" de color de la imagen, para que corresponda el color de la censura.<br/>
 > Aquí un ejemplo:
-Fase 1            |  Fase 2
+>
+Fase 1                     |  Fase 2
 :-------------------------:|:-------------------------:
 ![](https://github.com/AncheJeez/SpotifySongGuesser/blob/main/assets/fase1.png)  |  ![](https://github.com/AncheJeez/SpotifySongGuesser/blob/main/assets/fase2.png)
-Fase 3          |  Fase 4
+Fase 3                     |  Fase 4
 :-------------------------:|:-------------------------:
 ![](https://github.com/AncheJeez/SpotifySongGuesser/blob/main/assets/fase3.png)  |  ![](https://github.com/AncheJeez/SpotifySongGuesser/blob/main/assets/fase4.png)
 
