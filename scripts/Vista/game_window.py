@@ -108,6 +108,8 @@ class GameWindow(QMainWindow):
                         track_name = track.get('name', 'Unknown')
                         album_images = track.get('album', {}).get('images', [])
                         preview_url = track.get('preview_url')
+                    else:
+                        preview_url = None
 
                     if preview_url is not None:
                         all_tracks.append({

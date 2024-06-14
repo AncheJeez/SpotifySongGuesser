@@ -1,3 +1,8 @@
+<p align="center">
+  <img height="200" src="">
+  <br/>
+</p>
+<br/>
 # SpotifySongGuesser
 TFG DAM
 
