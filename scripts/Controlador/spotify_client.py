@@ -1,4 +1,3 @@
-# spotify_client.py
 import os
 from dotenv import load_dotenv
 import spotipy
@@ -10,7 +9,7 @@ client_id = os.getenv("CLIENT_ID")
 client_secret = os.getenv("CLIENT_SECRET")
 
 REDIRECT_URI = 'http://localhost:3000'
-USERNAME = 'Test name'
+USERNAME = 'current-user-spotify'
 
 def get_spotify_client():
     token = util.prompt_for_user_token(USERNAME, scope='user-library-read,user-top-read,user-read-private', client_id=client_id, client_secret=client_secret, redirect_uri=REDIRECT_URI)
