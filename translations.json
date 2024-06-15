@@ -24,7 +24,8 @@
         "time_sec":"Time (seconds)",
         "time_stats":"Time Statistics",
         "correct_txt":"Correct",
-        "incorrect_txt":"Incorrect"
+        "incorrect_txt":"Incorrect",
+        "delete_cache_exit":"Delete Cache and Exit"
     },
     "es": {
         "welcome": "Bienvenido",
@@ -51,6 +52,7 @@
         "time_sec":"Tiempo (segundos)",
         "time_stats":"Tiempo estadisticas",
         "correct_txt":"Correcto",
-        "incorrect_txt":"Incorrecto"
+        "incorrect_txt":"Incorrecto",
+        "delete_cache_exit":"Borrar cache y salir"
     }
 }

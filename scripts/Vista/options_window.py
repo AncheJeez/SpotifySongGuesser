@@ -2,6 +2,8 @@ from PySide6.QtWidgets import QMainWindow, QVBoxLayout, QWidget, QLabel, QPushBu
 from PySide6.QtCore import Qt
 from PySide6.QtGui import QIcon
 from Controlador.utils import open_window, load_settings, save_settings, load_translations
+import os
+import sys
 
 
 class OptionsWindow(QMainWindow):
@@ -14,6 +16,7 @@ class OptionsWindow(QMainWindow):
         self.setCentralWidget(self.central_widget)
         self.central_widget.setStyleSheet("background-color: #191414")
         main_layout = QVBoxLayout(self.central_widget)
+        button_width = 200
 
         # Load settings
         settings = load_settings()
@@ -85,6 +88,12 @@ class OptionsWindow(QMainWindow):
 
         main_layout.addLayout(self.lenguage_layout)
 
+        # borrar el cache y salir
+        delete_button = QPushButton(load_translations(self.lenguage,'delete_cache_exit'))
+        delete_button.setStyleSheet("background-color: #FF0000; color: #FFFFFF;")
+        delete_button.clicked.connect(self.delete_cache_and_exit)
+        main_layout.addWidget(delete_button)
+
         # volver atras
         button = QPushButton()
         button.setStyleSheet("background-color: #1DB954; color: #191414;")
@@ -114,4 +123,14 @@ class OptionsWindow(QMainWindow):
         self.volume_label.setText(f"{load_translations(new_lenguage_code,'volume')}: {settings['volume']}")
         self.cheats_checkbox.setText(load_translations(new_lenguage_code,"enable_cheats"))
         self.lenguage_label.setText(load_translations(new_lenguage_code,"lenguage"))
+
+    def delete_cache_and_exit(self):
+        cache_file = f".cache-current-user-spotify"
+        if os.path.exists(cache_file):
+            os.remove(cache_file)
+            print(f"Cache file {cache_file} deleted.")
+        else:
+            print(f"No cache file found at {cache_file}.")
+        self.close()
+        sys.exit()
         
