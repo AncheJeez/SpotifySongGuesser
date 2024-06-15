@@ -133,6 +133,7 @@ class GameWindow(QMainWindow):
         main_layout.addWidget(button, alignment=Qt.AlignCenter)
 
         self.songs = self.fetch_playlist_songs()
+        # self.played_songs = set()
         self.choose_random_song()
 
     def fetch_playlist_songs(self):
@@ -164,6 +165,9 @@ class GameWindow(QMainWindow):
 
     def choose_random_song(self):
         random.shuffle(self.songs)
+
+        # for song in self.songs:
+        #     if song['name'] not in self.played_songs:
         self.correct_song = self.songs[0]['name']
         if self.cheats_enabled == 2:
             self.song_label.setText(f"{load_translations(self.lenguage,'cheat_label')}: {self.correct_song}")
@@ -182,12 +186,20 @@ class GameWindow(QMainWindow):
             self.player.setSource(url)
             self.player.play()
 
+        # añadimos el nombre para evitar q se repita
+        # self.played_songs.add(song['name'])
+
         all_options = [song['name'] for song in self.songs[1:4]]
         all_options.append(self.correct_song)
         random.shuffle(all_options)
 
         for button, option in zip(self.option_buttons, all_options):
             button.setText(option)
+        # esto en caso de que no haya mas de 10 canciones si se van a repetir
+        # self.reset_played_songs()
+
+    def reset_played_songs(self):
+        self.played_songs.clear()
 
     def update_image(self, image_url):
         #REQUEST

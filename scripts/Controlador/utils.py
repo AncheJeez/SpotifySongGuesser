@@ -74,8 +74,11 @@ def get_average_color(img):
     img_array = np.array(img)
     # Compute the average color across all channels
     average_color = np.mean(img_array, axis=(0, 1))
-    # lo pasamos a int
-    average_color = tuple(average_color.astype(int))
+    # esto filtra en caso de que esté en una escala de grises
+    if np.isscalar(average_color):
+        average_color = (int(average_color),) * 3
+    else:
+        average_color = tuple(average_color.astype(int))
     return average_color
 
 def mute_player(self):
