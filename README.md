@@ -77,4 +77,4 @@ Fase 3                     |  Fase 4
 > <b>PySide6</b>: pip install pyside6 | python -m pip install --upgrade pyside6 <br/>
 > <b>Pillow</b>: pip install pillow <br/>
 > <b>Numpy</b>: pip install numpy <br/>
-
+> <b>Matplotlib</b>: pip install matplotlib <br/>
