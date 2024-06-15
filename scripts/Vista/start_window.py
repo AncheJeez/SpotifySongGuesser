@@ -34,7 +34,7 @@ class StartWindow(QMainWindow):
 
         # Nombre de usuario
         self.user_name_label = QLabel(f"{load_translations(lenguage,'welcome')}, {user_name}!")
-        self.user_name_label.setStyleSheet("color: #FFFFFF")
+        self.user_name_label.setStyleSheet("color: #1DB954; font-size: 20px")
         self.user_name_label.setAlignment(Qt.AlignCenter)
         main_layout.addWidget(self.user_name_label)
 
@@ -56,7 +56,7 @@ class StartWindow(QMainWindow):
         
         # Label
         label = QLabel(f"{load_translations(lenguage,'choose_way')}")
-        label.setStyleSheet("color: #FFFFFF; padding-bottom: 20px")
+        label.setStyleSheet("color: #1DB954; padding-bottom: 20px")
         label.setAlignment(Qt.AlignCenter)
         main_layout.addWidget(label)
 

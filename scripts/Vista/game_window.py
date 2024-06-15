@@ -9,7 +9,7 @@ from PySide6.QtWidgets import QMainWindow, QPushButton, QLabel, QWidget, QMessag
 from PySide6.QtGui import QPixmap, QIcon
 from PySide6.QtCore import QUrl
 from PySide6.QtMultimedia import QMediaPlayer, QAudioOutput
-from Controlador.utils import open_window, load_settings, save_settings, censor_image, mute_player
+from Controlador.utils import open_window, load_settings, save_settings, censor_image, mute_player, load_translations
 from Controlador.spotify_client import sp
 from Vista.answer_dialog import AnswerDialog
 #from .start_window import StartWindow
@@ -33,8 +33,8 @@ class GameWindow(QMainWindow):
         self.img_max_attempts = 3
         self.img_attempts = self.img_max_attempts - 1
         # intentos del juego
-        self.attempts = 3
-        self.max_attempts = 3
+        self.attempts = 0
+        self.max_attempts = 5
 
         self.current_img_url = ""
         self.songs_played = 0
@@ -42,6 +42,9 @@ class GameWindow(QMainWindow):
         self.previous_volume = 50
         self.mute_state = False
         
+        settings = load_settings()
+        self.lenguage = settings.get('lenguage', 'en')
+
         self.central_widget = QWidget()
         self.setCentralWidget(self.central_widget)
         self.central_widget.setStyleSheet("background-color: #191414")
@@ -60,31 +63,31 @@ class GameWindow(QMainWindow):
 
         # Label playlist name
         if playlist:
-            label = QLabel(f"{playlist['name']}")
-            label.setStyleSheet("color: #FFFFFF")
+            label = QLabel(f"{load_translations(self.lenguage,'playlist')}: {playlist['name']}")
+            label.setStyleSheet("color: #1DB954; font-size: 24px;")
             main_layout.addWidget(label)
 
         # label intentos
-        # self.intentos = QLabel(f"Attempts: {self.attempts-2}")
-        # self.intentos.setStyleSheet("color: #FFFFFF")
-        # main_layout.addWidget(self.intentos)
+        self.intentos = QLabel(f"{load_translations(self.lenguage,'attempts')}: {self.max_attempts - self.attempts}/{self.max_attempts}")
+        self.intentos.setStyleSheet("color: #FFFFFF; font-size: 20px;")
+        main_layout.addWidget(self.intentos, alignment=Qt.AlignCenter)
 
         # Label to display songs left
-        self.songs_left_label = QLabel(f"Songs Left: {self.songs_played}/{self.max_songs}")
-        self.songs_left_label.setStyleSheet("color: #FFFFFF")
+        self.songs_left_label = QLabel(f"{load_translations(self.lenguage,'songs_left')}: {self.songs_played}/{self.max_songs}")
+        self.songs_left_label.setStyleSheet("color: #FFFFFF; font-size: 18px;")
         main_layout.addWidget(self.songs_left_label, alignment=Qt.AlignCenter)
-        
-        # label que solo aparece si estan los cheats activados
-        if self.cheats_enabled == 2:
-            self.song_label = QLabel("")
-            self.song_label.setStyleSheet("color: #FFFFFF")
-            main_layout.addWidget(self.song_label)
 
         # label de la imagen
         self.song_image_label = QLabel()
         self.song_image_label.setAlignment(Qt.AlignCenter)
         self.song_image_label.setStyleSheet("QLabel{margin-top: 20px; margin-bottom: 20px; border: 2px solid #1DB954;}")
         main_layout.addWidget(self.song_image_label, alignment=Qt.AlignCenter)
+
+        # label que solo aparece si estan los cheats activados
+        if self.cheats_enabled == 2:
+            self.song_label = QLabel("")
+            self.song_label.setStyleSheet("color: #FFFFFF")
+            main_layout.addWidget(self.song_label, alignment=Qt.AlignCenter)
         
         # botones del juego
         buttons_layout = QGridLayout()
@@ -105,19 +108,25 @@ class GameWindow(QMainWindow):
         spacer_widget.setFixedHeight(40)
         main_layout.addWidget(spacer_widget)
 
-        button = QPushButton()
-        button.setStyleSheet("background-color: #1DB954; color: #191414;")
-        icon = QIcon("assets/undo.png")
-        button.setIcon(icon)
-        button.clicked.connect(lambda: self.stop_and_open_window())
-        main_layout.addWidget(button)
+        button_width = 200
 
+        # boton mute
         self.btnMute = QPushButton()
         self.btnMute.setStyleSheet("background-color: #1DB954; color: #191414;")
+        self.btnMute.setFixedWidth(button_width)
         self.btnMute.clicked.connect(lambda: self.mute_act())
         icon = QIcon("assets/volume_up.png")
         self.btnMute.setIcon(icon)
-        main_layout.addWidget(self.btnMute)
+        main_layout.addWidget(self.btnMute, alignment=Qt.AlignCenter)
+
+        # boton ir para atras
+        button = QPushButton()
+        button.setStyleSheet("background-color: #1DB954; color: #191414;")
+        button.setFixedWidth(button_width)
+        icon = QIcon("assets/undo.png")
+        button.setIcon(icon)
+        button.clicked.connect(lambda: self.stop_and_open_window())
+        main_layout.addWidget(button, alignment=Qt.AlignCenter)
 
         self.songs = self.fetch_playlist_songs()
         self.choose_random_song()
@@ -153,7 +162,7 @@ class GameWindow(QMainWindow):
         random.shuffle(self.songs)
         self.correct_song = self.songs[0]['name']
         if self.cheats_enabled == 2:
-            self.song_label.setText(f"Guess the song: {self.correct_song}")
+            self.song_label.setText(f"{load_translations(self.lenguage,'cheat_label')}: {self.correct_song}")
         self.preview_url = self.songs[0]['preview_url']
 
         #IMAGEN
@@ -209,12 +218,12 @@ class GameWindow(QMainWindow):
         selected_option = sender_button.text()
 
         if selected_option == self.correct_song:
-            self.answer_dialog = AnswerDialog("Correct! Congratulations!",1, self)
+            self.answer_dialog = AnswerDialog(f"{load_translations(self.lenguage,'correct')}",1, self)
             self.answer_dialog.exec_()
 
             self.songs_played += 1
             self.img_attempts = self.img_max_attempts - 1
-            self.songs_left_label.setText(f"Songs Left: {self.songs_played}/{self.max_songs}")
+            self.songs_left_label.setText(f"{load_translations(self.lenguage,'songs_left')} {self.songs_played}/{self.max_songs}")
             self.player.stop()
             if self.songs_played >= self.max_songs:
                 self.end_game()
@@ -222,15 +231,22 @@ class GameWindow(QMainWindow):
                 self.choose_random_song()
             for button in self.option_buttons:
                 if button != sender_button:
+                    button.setEnabled(True)
                     button.setStyleSheet("background-color: #1DB954; color: #191414")
         else:
-            self.answer_dialog = AnswerDialog("Incorrect. Please try again.",2, self)
+            self.attempts+=1
+            self.intentos.setText(f"{load_translations(self.lenguage,'attempts')}: {self.max_attempts - self.attempts}/{self.max_attempts}")
+            self.answer_dialog = AnswerDialog(f"{load_translations(self.lenguage,'incorrect')}",2, self)
             self.answer_dialog.exec_()
+            sender_button.setEnabled(False)
             sender_button.setStyleSheet("background-color: #FF0000; color: #FFFFFF")
             self.update_image(self.current_img_url)
 
-        # if self.attempts <= 0:
-        #     self.end_game()
+        if self.attempts >= self.max_attempts:
+            for button in self.option_buttons:
+                button.setEnabled(True)
+                button.setStyleSheet("background-color: #1DB954; color: #191414")
+            self.end_game()
     
     def media_status_changed(self, status):
         if status == QMediaPlayer.EndOfMedia:
@@ -245,16 +261,19 @@ class GameWindow(QMainWindow):
 
     def end_game(self):
         if self.songs_played >= self.max_songs:
-            self.answer_dialog = AnswerDialog("Game Over! You've played all 10 songs.",3, self)
+            self.answer_dialog = AnswerDialog(f"{load_translations(self.lenguage,'good_end')}",3, self)
             self.answer_dialog.exec_()
         else:
-            self.answer_dialog = AnswerDialog("Game Over! You've used all your attempts.",2, self)
+            self.answer_dialog = AnswerDialog(f"{load_translations(self.lenguage,'bad_end')}",2, self)
             self.answer_dialog.exec_()
 
 
         self.reset_game()
     
     def reset_game(self):
+        self.attempts = 0
+        self.img_attempts = self.img_max_attempts - 1
         self.songs_played = 0
         self.songs_left_label.setText(f"Songs Left: {self.songs_played}/{self.max_songs}")
+        self.intentos.setText(f"{load_translations(self.lenguage,'attempts')}: {self.max_attempts - self.attempts}/{self.max_attempts}")
         self.choose_random_song()

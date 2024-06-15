@@ -29,7 +29,7 @@ class ShowPlayListsWindow(QMainWindow):
 
         texto = f"{load_translations(lenguage,'user_playlists')}" if user_or_defaults else f"{load_translations(lenguage,'spotify_playlists')}"
         label = QLabel(texto)
-        label.setStyleSheet("color: #FFFFFF")
+        label.setStyleSheet("color: #1DB954; font-size: 15px")
         layout.addWidget(label)
 
         self.list_widget = QListWidget()

@@ -9,7 +9,15 @@
         "volume": "Volume",
         "lenguage": "Language",
         "english": "English",
-        "spanish": "Spanish"
+        "spanish": "Spanish",
+        "songs_left":"Songs left",
+        "cheat_label":"Right answer",
+        "correct":"Correct! Congratulations!",
+        "incorrect":"Incorrect. Please try again.",
+        "good_end":"Game Over! You've played all 10 songs.",
+        "bad_end":"Game Over! You've used all your attempts.",
+        "attempts":"Attempts left",
+        "playlist":"Playlist"
     },
     "es": {
         "welcome": "Bienvenido",
@@ -21,6 +29,14 @@
         "volume": "Volumen",
         "lenguage": "Idioma",
         "english": "Ingles",
-        "spanish": "Espanol"
+        "spanish": "Espanol",
+        "songs_left":"Canciones restantes",
+        "cheat_label":"Respuesta correcta",
+        "correct":"¡Respuesta correcta!",
+        "incorrect":"Incorrecto. Porfavor intentelo de nuevo.",
+        "good_end":"Game Over! Has jugado las 10 canciones.",
+        "bad_end":"Game Over! Has usado todos tus intentos.",
+        "attempts":"Intentos restantes",
+        "playlist":"Lista"
     }
 }
