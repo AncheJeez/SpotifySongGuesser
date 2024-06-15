@@ -17,7 +17,14 @@
         "good_end":"Game Over! You've played all 10 songs.",
         "bad_end":"Game Over! You've used all your attempts.",
         "attempts":"Attempts left",
-        "playlist":"Playlist"
+        "playlist":"Playlist",
+        "correct_vs_incorrect":"Correct vs. Wrong Attempts",
+        "total_time":"Total Time (s)",
+        "avg_time":"Avg Time per Song (s)",
+        "time_sec":"Time (seconds)",
+        "time_stats":"Time Statistics",
+        "correct_txt":"Correct",
+        "incorrect_txt":"Incorrect"
     },
     "es": {
         "welcome": "Bienvenido",
@@ -32,11 +39,18 @@
         "spanish": "Espanol",
         "songs_left":"Canciones restantes",
         "cheat_label":"Respuesta correcta",
-        "correct":"¡Respuesta correcta!",
+        "correct":"Respuesta correcta!",
         "incorrect":"Incorrecto. Porfavor intentelo de nuevo.",
         "good_end":"Game Over! Has jugado las 10 canciones.",
         "bad_end":"Game Over! Has usado todos tus intentos.",
         "attempts":"Intentos restantes",
-        "playlist":"Lista"
+        "playlist":"Lista",
+        "correct_vs_incorrect":"Intentos Correctos vs. Incorrectos",
+        "total_time":"Tiempo total (s)",
+        "avg_time":"Media tiempo por cancion (s)",
+        "time_sec":"Tiempo (segundos)",
+        "time_stats":"Tiempo estadisticas",
+        "correct_txt":"Correcto",
+        "incorrect_txt":"Incorrecto"
     }
 }

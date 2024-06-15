@@ -12,8 +12,10 @@ from PySide6.QtMultimedia import QMediaPlayer, QAudioOutput
 from Controlador.utils import open_window, load_settings, save_settings, censor_image, mute_player, load_translations
 from Controlador.spotify_client import sp
 from Vista.answer_dialog import AnswerDialog
+from Vista.statistics_dialog import StatisticsDialog
 #from .start_window import StartWindow
 import random
+import time
 
 
 class GameWindow(QMainWindow):
@@ -24,6 +26,8 @@ class GameWindow(QMainWindow):
         self.back_view_class = back_view_class
         self.user_or_defaults = user_or_defaults
         self.fix_4_circular_import = fix_4_circular_import
+        self.start_time = time.time()
+        self.total_time = 0
 
         # game variables
         self.playing = False
@@ -260,17 +264,22 @@ class GameWindow(QMainWindow):
         self.mute_state = not self.mute_state
 
     def end_game(self):
+        self.total_time = time.time() - self.start_time
         if self.songs_played >= self.max_songs:
             self.answer_dialog = AnswerDialog(f"{load_translations(self.lenguage,'good_end')}",3, self)
             self.answer_dialog.exec_()
         else:
             self.answer_dialog = AnswerDialog(f"{load_translations(self.lenguage,'bad_end')}",2, self)
             self.answer_dialog.exec_()
+        dialog = StatisticsDialog(self.songs_played, self.attempts, self.total_time)
+        dialog.exec_()
 
 
         self.reset_game()
     
     def reset_game(self):
+        self.start_time = time.time()
+        self.total_time = 0
         self.attempts = 0
         self.img_attempts = self.img_max_attempts - 1
         self.songs_played = 0
