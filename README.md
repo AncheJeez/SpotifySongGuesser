@@ -71,6 +71,10 @@ Fase 1                     |  Fase 2
 Fase 3                     |  Fase 4
 ![](https://github.com/AncheJeez/SpotifySongGuesser/blob/main/assets/fase3.png)  |  ![](https://github.com/AncheJeez/SpotifySongGuesser/blob/main/assets/fase4.png)
 
+>[!Note]
+> Se utiliza [matplotlib](https://matplotlib.org) para la visualización de estadísticas en el programa. Ya que PySide6 no incluye este
+> tipo de widgets.
+
 ## Instalación de las dependecias
 > [!Tip]
 > <b>Spotipy</b>: pip install spotipy --upgrade <br/>
