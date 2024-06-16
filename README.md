@@ -6,6 +6,7 @@
 
 ## Spotify Guesser
 ### Simple juego de música en el que puedes usar tus playlists de Spotify
+> [GoogleDocs_del_proyecto](https://docs.google.com/document/d/1eJQhkgISTE7GSzmY7BDxK1rWP6PC1NdysXjMTlmMIOk/edit?usp=sharing)
 
 ## Tabla de contenidos
 - [Advertencias](#adevertencias)
