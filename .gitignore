@@ -1,3 +1,4 @@
 tests/*
 scripts/Vista/__pycache__/*
 .cache-current-user-spotify
+.env
